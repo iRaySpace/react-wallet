@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Header, Card } from 'semantic-ui-react';
+import { Container, Header, Card, Grid } from 'semantic-ui-react';
 
+import { GCash } from './components';
 import { withDefaultLayout } from 'layouts';
 
 const CashIn: React.FC = () => {
@@ -24,6 +25,14 @@ const CashIn: React.FC = () => {
           description='Within 24 hours after payment'
         />
       </Card.Group>
+      <Header textAlign='center'>
+        Enter Payment Details
+      </Header>
+      <Grid centered>
+        <Grid.Column width={7}>
+          <GCash />
+        </Grid.Column>
+      </Grid>
     </Container>
   );
 }
