@@ -7,10 +7,10 @@ const App: React.FC = () => {
   return (
     <HashRouter>
       <Switch>
-        <Route exact path="/wallet" name="Wallet" render={() => <Wallet />} />
-        <Route exact path="/cash-in" name="Cash In" render={() => <CashIn />} />
-        <Route exact path="/cash-out" name="Cash Out" render={() => <CashOut />} />
-        <Route path="/transfer" name="Transfer" render={() => <Transfer />} />
+        <Route exact path="/wallet" name="Wallet" component={Wallet} />
+        <Route path="/cash-in" name="Cash In" component={CashIn} />
+        <Route path="/cash-out" name="Cash Out" component={CashOut} />
+        <Route path="/transfer" name="Transfer" component={Transfer} />
         <Redirect from="/" to="wallet" />
       </Switch>
     </HashRouter>
