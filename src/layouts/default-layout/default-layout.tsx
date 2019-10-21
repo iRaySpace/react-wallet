@@ -4,7 +4,7 @@ import { Menu, Container, Dropdown } from 'semantic-ui-react';
 const DefaultLayout: React.FC = (props) => {
   return (
     <>
-      <Menu inverted>
+      <Menu inverted color='blue'>
         <Container>
           <Menu.Item as='a' header>
             Wallet App
