@@ -5,7 +5,10 @@ import { Card, Form } from 'semantic-ui-react';
 const GCash: React.FC = () => {
   return (
     <Card fluid>
-      <Card.Content header>Transaction Details (GCash)</Card.Content>
+      <Card.Content>
+        <Card.Header>GCash Details</Card.Header>
+        <Card.Meta>Enter transaction details</Card.Meta>
+      </Card.Content>
       <Card.Content>
         <Form>
           <Form.Group widths='equal'>
