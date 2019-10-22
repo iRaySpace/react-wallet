@@ -9,7 +9,7 @@ const TransferSwitch: React.FC = () => {
   return (
     <Switch>
       <Route exact path={path} component={TransferComponent} />
-      <Route path={`${path}/success`}>
+      <Route exact path={`${path}/success`}>
         Success
       </Route>
     </Switch>
