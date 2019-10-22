@@ -1,5 +1,7 @@
 import React from 'react';
-import { Card, Form } from 'semantic-ui-react';
+import { Card } from 'semantic-ui-react';
+
+import SendMoneyForm from './send-money.form';
 
 
 const SendMoney: React.FC = () => {
@@ -10,13 +12,7 @@ const SendMoney: React.FC = () => {
         <Card.Meta>Share your blessings</Card.Meta>
       </Card.Content>
       <Card.Content>
-        <Form>
-          <Form.Group widths='equal'>
-            <Form.Input fluid label='Mobile number' placeholder='Mobile number' />
-            <Form.Input fluid label='Amount to send' placeholder='Amount to send' />
-          </Form.Group>
-          <Form.Button primary floated='right' content='Transfer' />
-        </Form>
+        <SendMoneyForm />
       </Card.Content>
     </Card>
   )
