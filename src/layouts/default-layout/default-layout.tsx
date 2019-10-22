@@ -1,13 +1,14 @@
 import React from 'react';
 import { Menu, Container, Dropdown } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 const DefaultLayout: React.FC = (props) => {
   return (
     <>
-      <Menu inverted color='blue'>
+      <Menu fluid compact inverted color='blue'>
         <Container>
-          <Menu.Item as='a' header>
-            Wallet App
+          <Menu.Item header>
+            <Link to="/">Wallet App</Link>
           </Menu.Item>
           <Menu.Menu position='right'>
             <Dropdown item pointing text='Administrator'>
@@ -18,6 +19,28 @@ const DefaultLayout: React.FC = (props) => {
               </Dropdown.Menu>
             </Dropdown>
           </Menu.Menu>
+        </Container>
+      </Menu>
+      <Menu
+        fluid
+        compact
+        borderless
+        widths={4}
+        size='huge'
+      >
+        <Container>
+          <Menu.Item>
+            <Link to='/'>Wallet</Link>
+          </Menu.Item>
+          <Menu.Item>
+            <Link to='/cash-in'>Cash In</Link>
+          </Menu.Item>
+          <Menu.Item>
+            <Link to='/cash-out'>Cash Out</Link>
+          </Menu.Item>
+          <Menu.Item>
+            <Link to='/transfer'>Transfer</Link>
+          </Menu.Item>
         </Container>
       </Menu>
       {props.children}
